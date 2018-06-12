@@ -2,13 +2,6 @@
         font-family: 'Roboto', sans-serif;
 }
 
-#blur{
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  -webkit-filter: blur(7px);
-}
-
 /*INTRO*/
 #introDiv{
   position: fixed;
@@ -17,111 +10,12 @@
   z-index: 9;
 }
 
-#intro1{
-  width: 600px;
-  height: 360px;
-  margin: auto;
-  margin-top: 200px;
-  background-color: #2b058b;
-  border-radius: 50px;
-}
-
-#intro1-text{
-  color: white;
-  font-weight: lighter;
-  font-size: 35px;
-  padding-left: 40px;
-  padding-top: 70px;
-  padding-bottom: 10px;
-}
-
-#about-text{
-  color: white;
-  font-weight: lighter;
-  font-size: 17px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
-#intro2{
-  display: none;
-  position: fixed;
-  width: 330px;
-  height: 165px;
-  background-color: white;
-  top: 100px;
-  left: 860px;
-}
-
-#intro3{
-  display: none;
-  position: fixed;
-  width: 330px;
-  height: 165px;
-  background-color: white;
-  top: 120px;
-  left: 400px;
-}
-
-#intro4{
-  display: none;
-  position: fixed;
-  width: 330px;
-  height: 270px;
-  background-color: white;
-  top: calc(100% - 320px);
-  left: 400px;
-}
-
-.intro-text{
-  font-size: 20px;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
-}
-
-.instructions h1{
-  color: black;
-}
-
-.instructions{
-  position: relative;
-  border-radius: 20px;
-  z-index: 12;
-}
-
-#intro-button-bar{
-  position: absolute;
-  margin-left: 40px;
-}
-
-#skip-button, #next-button{
-  position: absolute;
-  display: inline-block;
-  color: white;
-  width: 100px;
-  cursor: pointer;
-}
-
-#skip-button h1, #next-button h1{
-  font-size: 19px;
-}
-
-#skip-button{
-  text-align: left;
-}
-
-#next-button{
-  text-align: right;
-  margin-left: 150px;
-}
-
 /*MAIN*/
 #top{
         position: fixed;
         width: 100%;
-        height: 90px;
-        background-color: #5e35b1;
+        height: 70px;
+        background-color: #ff7800;
         top: 0;
         left: 0;
         right: 0;
@@ -144,82 +38,24 @@
         display: inline-block;
         height: 50%;
         width: auto;
-        margin-top: 27px;
-}
-
-#topLogoDiv{
-        margin-left: 40px;
-        margin-top: 25px;
-}
-
-#topLogo{
-        position: absolute;
-        height: 95%;
-        width: auto:
+        margin-top: 20px;
 }
 
 #topTitleDiv{
-        margin-left: 100px;
+        margin-left: 20px;
 }
 
 #topTitle{
         color: white;
         margin: 5px 0 0 0;
-        font-size: 29px;
+        font-size: 23px;
         font-weight: lighter;
 }
 
-#topSearchDiv{
-        width: 550px;
-        margin-left: calc(100% - 560px);
-        margin-top: 30px;
-}
-
-.cse .gsc-search-button input.gsc-input, input.gsc-input{
-  background-color: white !important;
-  border: none !important;
-}
-
-.cse .gsc-search-box, .gsc-search-box{
-  background-color: white !important;
-  border: 5px solid white !important;
-  border-radius: 35px !important;
-}
-
-.cse .gsc-control-cse, .gsc-control-cse{
-  background-color: transparent !important;
-  border: none !important;
-}
-
-.gsc-input-box{
-  border: none !important;
-}
-
-input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
-  border: none !important;
-  background-color: transparent !important;
-  background-image: url('images/searchGrey.png') !important;
-  background-position: 10px 0px !important;
-  background-repeat: no-repeat !important;
-  background-size: 25px !important;
-
-}
-
-#gs_tti50{
-}
-
-#gs_tti50 input{
-  background-image: none !important;
-  text-align: left !important;
-  text-align: right;
-  right: 25%;
-  top: 60%;
-}
-
 #sideBar{
-  position: absolute;
-  width: 370px;
-  height: 150%;
+  position: fixed;
+  width: 300px;
+  height: 100%;
   background-color: white;
   bottom: 0;
   left: 0;
@@ -228,67 +64,31 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-#sideBarHeader{
+#race-column, #year-column{
   position: absolute;
-  width: 100%;
-  height:  290px;
-  background-color: #fced1c;
+  height: 100%;
+  background-color: white;
 }
 
-#zipCodeDiv{
-  position: absolute;
-  margin-top: 210px;
-  margin-left: 40px;
-  color: black;
-  font-size: 34px;
-  font-weight: normal;
+#race-column{
+  width: calc(75% - 40px);
 }
 
-#sideBarInfoDiv{
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-left: 20px;
+#year-column{
+  width: calc(25% - 20px);
+  margin-left: 75%;
 }
 
-#sideBarInfoDiv hr{
-  display: none;
-}
-
-#sideBarInfoDiv center{
-  display: none;
-}
-
-#sideBarPercentDiv hr, #sideBarPercentDiv center{
-  display: none;
-}
-
-#sideBarPercentDiv b{
-  display: none;
-}
-
-#sideBarPercentDiv{
-  color: black;
-  font-size: 72px;
-  font-weight: normal;
-}
-
-#sideBarPercent{
-  color: black;
-  font-size: 72px;
-  font-weight: normal;
+.columnList{
+  margin-top: 20px;
 }
 
 #sideBarContent{
   position: absolute;
-  text-align: center;
-  width: 100%;
-  height: calc(100% - 300px);
-  margin-top: 320px;
-  background-color: white;
-}
-
-#sideBarText1Div{
-
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: 20px;
+  margin-top: 100px;
 }
 
 #sideBarText1, #sideBarText2{
@@ -297,127 +97,15 @@ input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:
   font-weight: lighter;
 }
 
-#sideBarText2Div{
-  margin-top: -20px;
-}
-
-#sideBarText2{
-
-}
-
-#sideBarHR{
-  background-color: black;
-  width: 100px;
-  height: 1px;
-  margin: auto;
-  margin-top: 40px;
-}
-
-#optionsTitle{
+.columnTitle{
   color: black;
   font-weight: bold;
-  font-size: 26px;
-  margin-top: 45px;
-}
-
-#optionsBarDiv{
-  width: 100%;
-  height: 240px;
-  margin-top: 30px;
-  background-color: white;
-}
-
-.options{
-  display: inline-block;
-  width: 120px;
-  height: 50%;
-  margin: 0 15px 0 15px;
-}
-
-.options:hover{
-  cursor: pointer;
-}
-
-.optionsIcon{
-  height: 45px;
-  width: auto;
-  margin-top: 15px;
-}
-
-.optionsText{
-  color: black;
-  font-weight: bold;
-  font-size: 12px;
-  margin-top: 15px;
-}
-
-#mainOptionDiv{
-  background-color: #fced1c;
-}
-
-#meetingOptionDiv{
-  text-decoration: none;
-}
-
-#calendarDiv, #housingDiv{
-  background-color: white;
-  width: 80%;
-  height: 600px;
-  margin-left: 30px;
-  margin-top: 20px;
-  display: none;
-}
-
-#calendarTitleDiv, #housingTitleDiv{
-  position: absolute;
-  height: 55px;
-  width: 80%;
-  background-color: #5e35b1;
-  text-align: left;
-}
-
-#calendarTitle, #housingTitle{
-  color: white;
   font-size: 20px;
-  font-weight: lighter;
-  margin-left: 10px;
 }
 
-#calendar{
-  position: absolute;
-  height: 600px;
-  width: 80%;
-  margin-left: -140px;
-  margin-top: 60px;
+.race-column-button, .year-column-button{
+  background-color: #ff7800;
 }
-
-#housingDiv{
-  height: 200px;
-}
-
-#housingForm{
-  position: absolute;
-  margin-top: 80px;
-  font-size: 16px;
-}
-
-#housingResources{
-  position: absolute;
-  margin-top: 120px;
-  text-align: left;
-  margin-left: 10px;
-}
-
-#housingResourcesTitle{
-  color: black;
-  font-size: 16px;
-}
-
-#hacaLink{
-  font-size: 16px;
-  color: black;
-}
-
 
 /*LEGEND*/
 #legend{

@@ -1,13 +1,6 @@
-//INTRO
-function skip(position){
-  document.getElementById("blur").setAttribute("style","-webkit-filter: blur(0px)");
-  document.getElementsByClassName("instructions")[position].style.display = "none";
-}
-
-function next(position){
-  document.getElementsByClassName("instructions")[position].style.display = "none";
-  document.getElementById("blur").setAttribute("style","-webkit-filter: blur(0px)");
-  document.getElementsByClassName("instructions")[position + 1].style.display = "block";
+//BAR
+function raceClick(){
+  console.log("CLICK!!!");
 }
 
 //FOR MAP

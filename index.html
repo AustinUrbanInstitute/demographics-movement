@@ -1,196 +1,58 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title>Project Imparity</title>
+	<title>Demographics Movement</title>
 	<link rel="stylesheet" type="text/css" href="main.css" />
 	<link rel="stylesheet" href="css/bootstrap.iframe.css"/>
 	<link rel="stylesheet" href="css/custom.css"/>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 	<script src = "js/dummy.js"></script>
-	<link rel="icon" type="img/ico" href="images/logo-dark.png">
+	<!--<link rel="icon" type="img/ico" href="images/logo-dark.png">-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body onload = "loadMap()">
 
-				<div class = "instructions" id = "intro1">
-					<h1 id = "intro1-text">Welcome to Project Imparity.</h1>
-					<h1 id = "about-text">Afford, not ignored.</h1>
-					<h1 id = "about-text">Austin, TX is one of the most rapidly growing cities in the nation, and the 10th fastest in gentrification according to Realtor.com. Project Imparity serves to provide assistance to families whose neighborhoods are facing gentrification, and an outlet for citizens to have their voices heard.</h1>
-					<div id = "intro-button-bar">
-						<div onclick = "skip(0)" id = "skip-button">
-							<h1 style = "color: white">SKIP</h1>
-						</div>
-						<div onclick = "next(0)" id = "next-button">
-							<h1 style = "color: white">NEXT</h1>
-						</div>
-					</div>
-				</div>
-
-				<div id = "intro2" class = "instructions">
-					<h1 class = "intro-text" id = "intro2-text">1. Type in your address and hit the search button</h1>
-					<div id = "intro-button-bar">
-						<div onclick = "skip(1)" id = "skip-button">
-							<h1>SKIP</h1>
-						</div>
-						<div onclick = "next(1)" id = "next-button">
-							<h1>NEXT</h1>
-						</div>
-					</div>
-				</div>
-
-				<div id = "intro3" class = "instructions">
-					<h1 class = "intro-text" id = "intro3-text">2. Click on the map to view gentrification data</h1>
-					<div id = "intro-button-bar">
-						<div onclick = "skip(2)" id = "skip-button">
-							<h1>SKIP</h1>
-						</div>
-						<div onclick = "next(2)" id = "next-button">
-							<h1>NEXT</h1>
-						</div>
-					</div>
-				</div>
-
-				<div id = "intro4" class = "instructions">
-					<h1 class = "intro-text" id = "intro3-text">
-						3. Explore the options below. You can:
-						<ul>
-							<li>Locate nearby affordable housing</li>
-							<li>See city districts and contact a representative</li>
-							<li>View city hall meetings</li>
-						</ul>
-					</h1>
-					<div id = "intro-button-bar">
-						<div onclick = "skip(3)" id = "skip-button">
-							<h1>SKIP</h1>
-						</div>
-						<div onclick = "skip(3)" id = "next-button">
-							<h1>FINISH</h1>
-						</div>
-					</div>
-				</div>
-
-
-			<div id = "blur">
         <div id = "top">
-                <!--Menu for now-->
-                <div id = "topLogoDiv">
+                <!--<div id = "topLogoDiv">
                         <img id = "topLogo" src = "images/logo-light.png">
-                </div>
+                </div>-->
 
                 <div id = "topTitleDiv">
-                        <h1 id = "topTitle">Project Imparity</h1>
+                        <h1 id = "topTitle">Demographics Movement</h1>
                 </div>
 
-                <div id = "topSearchDiv">
-                        <!--Search-->
 
-									        <form class="form-inline" role="form">
-									          <div class="form-group">
-									            <div class="input-group" id='search_address_group'>
-									              <input class='form-control' id='search_address' placeholder='Enter an address/intersection' type='text' />
-									              <span class="input-group-btn">
-																	<a class='btn btn-primary' id='search' href='#' onclick = "loadSearchMap()">
-										                <i class='glyphicon glyphicon-search'></i>
-										              </a>
-
-																	<a class='btn btn-default' id='find_me' href='#'>
-									                  <i class='glyphicon glyphicon-screenshot'></i>
-									                </a>
-
-										              <a class='btn btn-default' id='reset' href='#'>
-										                <i class='glyphicon glyphicon-repeat'></i>
-										              </a>
-									              </span>
-									            </div>
-									          </div>
-									        </form>
-                </div>
         </div>
 
         <div id = "sideBar">
-					<div id = "sideBarHeader">
-						<div id = "zipCodeDiv">
-							<!--EDIT THIS TEXT-->
-							<b>Zipcode:</b>
-						</div>
-					</div>
+
 
 					<div id = "sideBarContent">
-						<div id = "sideBarText1Div">
-							<!--EDIT THIS TEXT-->
-							<h1 id = "sideBarText1">Gentrification rate:</h1>
+
+						<div id = "race-column">
+							<h1 class = "columnTitle">Race:</h1>
+							<div class = "columnList">
+							<div class = "race-column-button" onclick = "raceClick()"><p>White alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>Black alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>American Indian and Alaska Native alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>Asian alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>Native Hawaiian and Other Pacific Islander alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>Some other race alone</p></div>
+							<div class = "race-column-button" onclick = "raceClick()"><p>Two or more races</p></div>
+							</div>
 						</div>
 
-						<!--JUMP TO CALENDAR-->
-						<a name = "calendarJump"></a>
-						<a name = "housingJump"></a>
-
-						<div id = "sideBarPercentDiv">
-							<!--EDIT THIS TEXT-->
-							<h1 id = "sideBarPercent">00%</h1>
-						</div>
-
-						<div id = "sideBarInfoDiv">
-						</div>
-
-						<div id = "sidebarHR"></div>
-
-						<!--OPTIONS-->
-						<h1 id = "optionsTitle">Options:</h1>
-
-						<!--JUMP TO HOUSING-->
-						<a name = "housingJump"></a>
-
-						<div id = "optionsBarDiv">
-							<div id = "mainOptionDiv" class = "options" onclick = "showGentrification()">
-								<img src = "images/pin.png" class = "optionsIcon"/>
-								<h1 class = "optionsText">GENTRIFICATION PERCENTAGE MAP</h1>
-							</div>
-
-							<a id = "locateOptionDiv" class = "options" href = "#housingJump"><div onclick = "showAffordableHousing()">
-								<img src = "images/house.png" class = "optionsIcon"/>
-								<h1 class = "optionsText">FIND AFFORDABLE HOUSING</h1>
-							</div></a>
-
-							<div id = "callOptionDiv" class = "options" onclick = "showDistricts()">
-								<img src = "images/call.png" class = "optionsIcon"/>
-								<h1 class = "optionsText">CONTACT LOCAL REPRESENTATIVE</h1>
-							</div>
-
-							<a id = "meetingOptionDiv" class = "options" href = "#calendarJump"><div onclick = "showCalendar()">
-								<img src = "images/cal.png" class = "optionsIcon"/>
-								<h1 class = "optionsText">ATTEND CITY HALL MEETING</h1>
-							</div>
-						</div></a>
-
-						<div id = "calendarDiv">
-							<div id = "calendarTitleDiv">
-								<h1 id = "calendarTitle">City Hall Calendar:</h1>
-							</div>
-							<iframe id = "calendar" src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=agk2rr9qs6b9d632nsj9jkjt9c%40group.calendar.google.com&amp;color=%23691426&amp;ctz=America%2FChicago" style="border-width:0" frameborder="0" scrolling="no"></iframe>
-						</div>
-
-						<div id = "housingDiv">
-							<div id = "housingTitleDiv">
-								<h1 id = "housingTitle">Housing Options:</h1>
-							</div>
-							<div id = "housingForm" class="form-group">
-								<label>&nbsp;
-									Search within&nbsp;
-									<select id='search_radius'>
-										<option value='400'>2 blocks</option>
-										<option value='805'>1/2 mile</option>
-										<option value='1610'>1 mile</option>
-										<option value='3220'>2 miles</option>
-									</select>
-								</label>
-							</div>
-							<div id = "housingResources">
-								<h1 id = "housingResourcesTitle">Resources:</h1>
-								<a id = "hacaLink" href = "https://www.austinhabitat.org/" target = "_blank">Habitat for Humanity Austin</a>
-								<br>
-								<a id = "hacaLink" href = "https://www.hacanet.org/" target = "_blank">Housing Authority of the City of Austin</a>
+						<div id = "year-column">
+							<h1 class = "columnTitle">Year:</h1>
+							<div class = "columnList">
+							<div class = "year-column-button" onclick = "yearClick()"><p>2010</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2011</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2012</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2013</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2014</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2015</p></div>
+							<div class = "year-column-button" onclick = "yearClick()"><p>2016</p></div>
 							</div>
 						</div>
 
@@ -252,7 +114,7 @@
 
 			      //]]>
 			    </script>
-</div>
+
 
 </div>
 </body>
