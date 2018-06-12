@@ -28,7 +28,7 @@
         width: 100%;
         height: calc(100% - 90px);
         background-color: white;
-        top: 90px;
+        top: 0px;
         left: 0;
         right: 0;
 }
@@ -105,6 +105,13 @@
 
 .race-column-button, .year-column-button{
   background-color: #ff7800;
+}
+
+/*MAP*/
+#googft-mapCanvas {
+  position: fixed !important;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 /*LEGEND*/

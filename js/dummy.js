@@ -1,12 +1,8 @@
-//BAR
-function raceClick(){
-  console.log("CLICK!!!");
-}
 
-//FOR MAP
+/*
 var myMap = new MapsLib({
-  fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-  googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+  fusionTableId:      "1Oronk4bWoaxzoKLkVVHtfXQuKQnBMHl3uHUjuH8y",
+  googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
   locationColumn:     "geometry",
   map_center:         [30.2672, -97.7431],
   locationScope:      "austin"
@@ -14,7 +10,7 @@ var myMap = new MapsLib({
 
 var dummyMap = new MapsLib({
   fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-  googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+  googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
   locationColumn:     "geometry",
   map_center:         [30.2672, -97.7431],
   locationScope:      "austin"
@@ -22,8 +18,8 @@ var dummyMap = new MapsLib({
 
 function loadMap(){
   myMap = new MapsLib({
-    fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-    googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+    fusionTableId:      "1Oronk4bWoaxzoKLkVVHtfXQuKQnBMHl3uHUjuH8y",
+    googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
     locationColumn:     "geometry",
     map_center:         [30.2672, -97.7431],
     locationScope:      "austin"
@@ -40,7 +36,7 @@ function showGentrification(){
   if(myMap.fusionTableId !== "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE"){
     myMap= new MapsLib({
       fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-      googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+      googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
       locationColumn:     "geometry",
       map_center:         [30.2672, -97.7431],
       locationScope:      "austin"
@@ -54,7 +50,7 @@ function showGentrification(){
   } else{
     myMap = new MapsLib({
       fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-      googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+      googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
       locationColumn:     "geometry",
       map_center:         [30.2672, -97.7431],
       locationScope:      "austin"
@@ -71,7 +67,7 @@ function showDistricts(){
   if(myMap.fusionTableId !== "1o_NBmKAHnbtyUqOWsQselwKFRxmiaQ_PJmkdQdU2"){
     myMap= new MapsLib({
       fusionTableId:      "1o_NBmKAHnbtyUqOWsQselwKFRxmiaQ_PJmkdQdU2",
-      googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+      googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
       locationColumn:     "geometry",
       map_center:         [30.2672, -97.7431],
       locationScope:      "austin"
@@ -87,7 +83,7 @@ function showDistricts(){
   } else{
     myMap = new MapsLib({
       fusionTableId:      "1EHig2fLqGlw_259sUar_n8BKrn5-l5NL-oNzpNkE",
-      googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+      googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
       locationColumn:     "geometry",
       map_center:         [30.2672, -97.7431],
       locationScope:      "austin"
@@ -104,7 +100,7 @@ function showAffordableHousing(){
   if(myMap.fusionTableId !== "1lKb9R5voQO7geXSokjiFA2LGYimbySjVVVR77VXx"){
     myMap= new MapsLib({
       fusionTableId:      "1lKb9R5voQO7geXSokjiFA2LGYimbySjVVVR77VXx",
-      googleApiKey:       "AIzaSyAWnB_I7OITzZAyCWNQEAOQaQ1TREUUXEk",
+      googleApiKey:       "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw",
       locationColumn:     "geometry",
       map_center:         [30.2672, -97.7431],
       locationScope:      "austin"
@@ -196,3 +192,4 @@ function showInfo(){
     }, 1000);
   }
 }
+*/
