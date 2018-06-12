@@ -32,6 +32,9 @@
             //UPDATE YEAR
             selectyear = year;
             console.log("Year changed to: " + selectyear);
+            updateMapId(selectrace, selectyear);
+            initialize();
+            console.log('MAP CHANGED');
         }
         
         function updateMapId(race, year){
@@ -66,6 +69,54 @@
                     mapId = '1pI7a0MdVzos_6SBrOdPQ8XOzN848PGHTi9uX0xvF';
                 } else if(race == 'combo'){
                     mapId = '1g0iq4KQBQik0n5b7Xi-6TDMEJ5y81FEL5ULO8aTf';
+                }
+            } else if(year == '2012'){
+                if(race == 'white'){
+                    mapId = '1myMISBxvKMxlZMK3euu5IZfPMhCc0MQ3JctILKtO';
+                } else if(race == 'black'){
+                    mapId = '1Zc6ynv26sgmzDimI8hJ_NgZZCpfAd00tIb3c04Jp';
+                } else if(race == 'native'){
+                    mapId = '1mDsyQoxKXG8AhvCTefyydhOs5wN2Xn41ZUbyqtuJ';
+                } else if(race == 'asian'){
+                    mapId = '1AwedsP2_S5RXC2SGloZMR2ufD3vZJrwfJBta0QuW';
+                } else if(race == 'islander'){
+                    mapId = '1ieNyMMV8BBhs2apBdGQUCb-xy_raKHeWsR78dhww';
+                } else if(race == 'other'){
+                    mapId = '1R7HcjA16xH6uaxPqXHsmEeMV6bwidt7VVfwsFFXP';
+                } else if(race == 'combo'){
+                    mapId = '16Zw-dLHlV-YkIww8qu08PzUBbujj-3RwRD4OHR3s';
+                }
+            } else if(year == '2013'){
+                if(race == 'white'){
+                    mapId = '1a4jbFlpr83OJ7yIchBICThtrInHf9pcEAJqWPqSc';
+                } else if(race == 'black'){
+                    mapId = '1KnBN5-el2qs7LysGrz_bxMWm5jhjOGUxdwMBeKnX';
+                } else if(race == 'native'){
+                    mapId = '1og2UafSqZzJqZZHpY_Xenw9ZnUIrZN8qukJ4-M2y';
+                } else if(race == 'asian'){
+                    mapId = '1mKut3QXVxUHMk9ZIRkIVx9G_f5IWnhq48filUCgU';
+                } else if(race == 'islander'){
+                    mapId = '1Obp1tZig6e-UFcMR4eNoVkR1AKKCDETYBLsiYzCQ';
+                } else if(race == 'other'){
+                    mapId = '1dlhLCoBKwD191LXCnA328v9EgRQkILGIJHELP4Br';
+                } else if(race == 'combo'){
+                    mapId = '1JkhDk99Pe-2ZMX40refKPbn7ewboBR5leMKioUCw';
+                }
+            } else if(year == '2014'){
+                if(race == 'white'){
+                    mapId = '1FFMw8MAYRUm26y0fVD34PQU-6O8lRW-KfACVQlbe';
+                } else if(race == 'black'){
+                    mapId = '1n6KS7DKnhPVASPyhDkngnB1H_asSFFPt0OOS-J7r';
+                } else if(race == 'native'){
+                    mapId = '11R0iPeYP33iiNINCt3RRtkmGtajI3p8BMzS97DDJ';
+                } else if(race == 'asian'){
+                    mapId = '1kyHKpycEqa3ZfQfBVZMyG4owDzGrOLIpArRE40bR';
+                } else if(race == 'islander'){
+                    mapId = '1UKess0Q4B9RbIww5p_vs1edGclmgOCID6ICyrEar';
+                } else if(race == 'other'){
+                    mapId = '1F94dR0o0XWMOWSjSj4aiHkMdzrdQtPbhoJGY45sn';
+                } else if(race == 'combo'){
+                    mapId = '1I08zftNGMrPyOKI_6MTNhWKNg7WCRDS_AYBO5ofQ';
                 }
             }
             console.log("MapId changed to: " + mapId);
