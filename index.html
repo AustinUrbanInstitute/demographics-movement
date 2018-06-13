@@ -26,6 +26,11 @@
             updateMapId(selectrace, selectyear);
             initialize();
             console.log('MAP CHANGED');
+            var elements = document.getElementsByClassName('race-column-button');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundColor = 'white';
+            }
+            document.getElementById(race).style.backgroundColor = "#ff7800";
         }
 
         function yearClick(year) {
@@ -35,6 +40,11 @@
             updateMapId(selectrace, selectyear);
             initialize();
             console.log('MAP CHANGED');
+            var elements = document.getElementsByClassName('year-column-button');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundColor = 'white';
+            }
+            document.getElementById(year).style.backgroundColor = "#ff7800";
         }
 
         function updateMapId(race, year) {
@@ -209,8 +219,6 @@
                 viewport.setAttribute('content', 'initial-scale=1.0, user-scalable=no');
             }
             var mapDiv = document.getElementById('googft-mapCanvas');
-            mapDiv.style.width = isMobile ? '100%' : '500px';
-            mapDiv.style.height = isMobile ? '100%' : '300px';
             var map = new google.maps.Map(mapDiv, {
                 center: new google.maps.LatLng(30.302042273550025, -97.64095630979722)
                 , zoom: 9
@@ -253,9 +261,6 @@
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
     <div id="top">
-        <!--<div id = "topLogoDiv">
-                        <img id = "topLogo" src = "images/logo-light.png">
-                    </div>-->
         <div id="topTitleDiv">
             <h1 id="topTitle">Demographics Movement</h1> </div>
     </div>
@@ -264,25 +269,25 @@
             <div id="race-column">
                 <h1 class="columnTitle">Race:</h1>
                 <div class="columnList">
-                    <div class="race-column-button" onclick="raceClick('white')">
+                    <div class="race-column-button" onclick="raceClick('white')" id='white'>
                         <p>White alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('black')">
+                    <div class="race-column-button" onclick="raceClick('black')" id='black'>
                         <p>Black alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('native')">
+                    <div class="race-column-button" onclick="raceClick('native')" id='native'>
                         <p>American Indian and Alaska Native alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('asian')">
+                    <div class="race-column-button" onclick="raceClick('asian')" id='asian'>
                         <p>Asian alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('islander')">
+                    <div class="race-column-button" onclick="raceClick('islander')" id='islander'>
                         <p>Native Hawaiian and Other Pacific Islander alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('other')">
+                    <div class="race-column-button" onclick="raceClick('other')" id='other'>
                         <p>Some other race alone</p>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('combo')">
+                    <div class="race-column-button" onclick="raceClick('combo')" id='combo'>
                         <p>Two or more races</p>
                     </div>
                 </div>
@@ -290,25 +295,25 @@
             <div id="year-column">
                 <h1 class="columnTitle">Year:</h1>
                 <div class="columnList">
-                    <div class="year-column-button" onclick="yearClick('2010')">
+                    <div class="year-column-button" onclick="yearClick('2010')" id='2010'>
                         <p>2010</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2011')">
+                    <div class="year-column-button" onclick="yearClick('2011')" id='2011'>
                         <p>2011</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2012')">
+                    <div class="year-column-button" onclick="yearClick('2012')" id='2012'>
                         <p>2012</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2013')">
+                    <div class="year-column-button" onclick="yearClick('2013')" id='2013'>
                         <p>2013</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2014')">
+                    <div class="year-column-button" onclick="yearClick('2014')" id='2014'>
                         <p>2014</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2015')">
+                    <div class="year-column-button" onclick="yearClick('2015')" id='2015'>
                         <p>2015</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2016')">
+                    <div class="year-column-button" onclick="yearClick('2016')" id='2016'>
                         <p>2016</p>
                     </div>
                 </div>
@@ -316,7 +321,7 @@
         </div>
     </div>
     <div id="main">
-        <div id="legend">
+        <!--<div id="legend">
             <h1 id="legendTitle">Gentrification Percentages:</h1>
             <div id="legendTable">
                 <div class="legendRow">
@@ -340,9 +345,10 @@
                         <div class="legendSquare" style="background-color: #73a5cb"></div>
                         <div class="legendSubject">no data</div>
                     </div>
-                </div> <a id="legendSource" target="_blank" href="https://fusiontables.google.com/DataSource?docid=101jSo8YC3qo5qZ-AbAoDWb6NSVp0Zr1tGgNhuxI0#rows:id=1">Source</a> </div>
-            <!--MAP-->
-            <div id="googft-mapCanvas"></div>
+                </div> <a id="legendSource" target="_blank" href="https://fusiontables.google.com/DataSource?docid=101jSo8YC3qo5qZ-AbAoDWb6NSVp0Zr1tGgNhuxI0#rows:id=1">Source</a> </div>-->
+        <!--MAP-->
+        <div id="googft-mapCanvas"></div>
+    </div>
 </body>
 
 </html>

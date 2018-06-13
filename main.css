@@ -1,193 +1,208 @@
-*{
-        font-family: 'Roboto', sans-serif;
+* {
+    font-family: 'Roboto', sans-serif;
 }
+
 
 /*INTRO*/
-#introDiv{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 9;
+
+#introDiv {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
 }
+
 
 /*MAIN*/
-#top{
-        position: fixed;
-        width: 100%;
-        height: 70px;
-        background-color: #ff7800;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+#top {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #ff7800;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-#main{
-        position: fixed;
-        width: 100%;
-        height: calc(100% - 90px);
-        background-color: white;
-        top: 0px;
-        left: 0;
-        right: 0;
+#main {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: white;
+    top: 0px;
+    left: 0;
+    right: 0;
 }
 
-#topLogoDiv, #topTitleDiv, #topSearchDiv{
-        position: absolute;
-        display: inline-block;
-        height: 50%;
-        width: auto;
-        margin-top: 20px;
+#topLogoDiv,
+#topTitleDiv,
+#topSearchDiv {
+    position: absolute;
+    display: inline-block;
+    height: 50%;
+    width: auto;
+    margin-top: 20px;
 }
 
-#topTitleDiv{
-        margin-left: 20px;
+#topTitleDiv {
+    margin-left: 20px;
 }
 
-#topTitle{
-        color: white;
-        margin: 5px 0 0 0;
-        font-size: 23px;
-        font-weight: lighter;
+#topTitle {
+    color: white;
+    margin: 5px 0 0 0;
+    font-size: 23px;
+    font-weight: lighter;
 }
 
-#sideBar{
-  position: fixed;
-  width: 300px;
-  height: 100%;
-  background-color: white;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+#sideBar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-#race-column, #year-column{
-  position: absolute;
-  height: 100%;
-  background-color: white;
+#race-column,
+#year-column {
+    position: absolute;
+    height: 100%;
+    background-color: white;
 }
 
-#race-column{
-  width: calc(75% - 40px);
+#race-column {
+    width: calc(75% - 40px);
 }
 
-#year-column{
-  width: calc(25% - 20px);
-  margin-left: 75%;
+#year-column {
+    width: calc(25% - 20px);
+    margin-left: 75%;
 }
 
-.columnList{
-  margin-top: 20px;
+.columnList {
+    margin-top: 20px;
 }
 
-#sideBarContent{
-  position: absolute;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  margin: 20px;
-  margin-top: 100px;
+#sideBarContent {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    margin: 20px;
+    margin-top: 100px;
 }
 
-#sideBarText1, #sideBarText2{
-  color: black;
-  font-size: 15px;
-  font-weight: lighter;
+#sideBarText1,
+#sideBarText2 {
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
-.columnTitle{
-  color: black;
-  font-weight: bold;
-  font-size: 20px;
+.columnTitle {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.race-column-button, .year-column-button{
-  background-color: #ff7800;
+.race-column-button,
+.year-column-button {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: white;
 }
+
 
 /*MAP*/
+
 #googft-mapCanvas {
-  position: fixed !important;
-  height: 100% !important;
-  width: 100% !important;
+    position: fixed !important;
+    height: 100% !important;
+    width: 100% !important;
 }
+
 
 /*LEGEND*/
-#legend{
-  position: fixed;
-  width: 200px;
-  height: 250px;
-  background-color: white;
-  top: 120px;
-  right: 10px;
-  z-index: 9;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+#legend {
+    position: fixed;
+    width: 200px;
+    height: 250px;
+    background-color: white;
+    top: 120px;
+    right: 10px;
+    z-index: 9;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-#legendTitle, #legendSource{
-  color: black;
-  font-weight: normal;
-  font-size: 18px;
-  margin-top: 15px;
-  margin-left: 10px;
+#legendTitle,
+#legendSource {
+    color: black;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
-#legendSource{
-  text-decoration: underline;
+#legendSource {
+    text-decoration: underline;
 }
 
-#legendTable{
+#legendTable {}
 
+.legendRow {
+    width: 200px;
+    margin-bottom: 3px;
+    margin-left: 10px;
 }
 
-.legendRow{
-  width: 200px;
-  margin-bottom: 3px;
-  margin-left: 10px;
+.legendSquare,
+.legendSubject {
+    display: inline-block;
 }
 
-.legendSquare, .legendSubject{
-  display: inline-block;
+.legendSquare {
+    /*BACKGROUND COLORS IN HTML*/
+    width: 22px;
+    height: 22px;
 }
 
-.legendSquare{
-  /*BACKGROUND COLORS IN HTML*/
-  width: 22px;
-  height: 22px;
+.legendSubject {
+    width: 120px;
+    margin-left: 5px;
 }
 
-.legendSubject{
-  width: 120px;
-  margin-left: 5px;
+#legendSource {
+    font-size: 12px;
 }
 
-#legendSource{
-  font-size: 12px;
+#mapFrame {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-#mapFrame{
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+#districtMapDiv {
+    position: fixed;
+    z-index: 22;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
-#districtMapDiv{
-  position: fixed;
-  z-index: 22;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-#districtMap{
-  position: absolute;
-  height: 600;
-  width: 600;
-  margin-top: 100px;
-  margin-left: 450px;
+#districtMap {
+    position: absolute;
+    height: 600;
+    width: 600;
+    margin-top: 100px;
+    margin-left: 450px;
 }
