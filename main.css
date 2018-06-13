@@ -70,6 +70,22 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+#raceYearDiv, #mapTypeDiv, #sourceDiv{
+    position: absolute;
+    width: 100%;
+}
+
+#raceYearDiv{
+}
+
+#mapTypeDiv{
+    margin-top: 400px;
+}
+
+#sourceDiv{
+    bottom: 50px;
+}
+
 #race-column,
 #year-column {
     position: absolute;
@@ -78,12 +94,12 @@
 }
 
 #race-column {
-    width: calc(75% - 40px);
+    width: calc(75% - 0px);
 }
 
 #year-column {
     width: calc(25% - 20px);
-    margin-left: 75%;
+    margin-left: calc(75% + 20px);
 }
 
 .columnList {
@@ -95,7 +111,7 @@
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     margin: 20px;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 #sideBarText1,
@@ -112,12 +128,12 @@
 }
 
 .race-column-button,
-.year-column-button {
+.year-column-button,
+.map-column-button{
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     background-color: white;
 }
-
 
 /*MAP*/
 

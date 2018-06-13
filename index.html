@@ -266,55 +266,78 @@
     </div>
     <div id="sideBar">
         <div id="sideBarContent">
-            <div id="race-column">
-                <h1 class="columnTitle">Race:</h1>
-                <div class="columnList">
-                    <div class="race-column-button" onclick="raceClick('white')" id='white'>
-                        <p>White alone</p>
+            <div id="raceYearDiv">
+                <div id="race-column">
+                    <h1 class="columnTitle">Race:</h1>
+                    <div class="columnList">
+                        <div class="race-column-button" onclick="raceClick('white')" id='white' style="background-color: #ff7800">
+                            <p>White alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('black')" id='black'>
+                            <p>Black alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('native')" id='native'>
+                            <p>American Indian and Alaska Native alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('asian')" id='asian'>
+                            <p>Asian alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('islander')" id='islander'>
+                            <p>Native Hawaiian and Other Pacific Islander alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('other')" id='other'>
+                            <p>Some other race alone</p>
+                        </div>
+                        <div class="race-column-button" onclick="raceClick('combo')" id='combo'>
+                            <p>Two or more races</p>
+                        </div>
                     </div>
-                    <div class="race-column-button" onclick="raceClick('black')" id='black'>
-                        <p>Black alone</p>
-                    </div>
-                    <div class="race-column-button" onclick="raceClick('native')" id='native'>
-                        <p>American Indian and Alaska Native alone</p>
-                    </div>
-                    <div class="race-column-button" onclick="raceClick('asian')" id='asian'>
-                        <p>Asian alone</p>
-                    </div>
-                    <div class="race-column-button" onclick="raceClick('islander')" id='islander'>
-                        <p>Native Hawaiian and Other Pacific Islander alone</p>
-                    </div>
-                    <div class="race-column-button" onclick="raceClick('other')" id='other'>
-                        <p>Some other race alone</p>
-                    </div>
-                    <div class="race-column-button" onclick="raceClick('combo')" id='combo'>
-                        <p>Two or more races</p>
+                </div>
+                <div id="year-column">
+                    <h1 class="columnTitle">Year:</h1>
+                    <div class="columnList">
+                        <div class="year-column-button" onclick="yearClick('2010')" id='2010' style="background-color: #ff7800">
+                            <p>2010</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2011')" id='2011'>
+                            <p>2011</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2012')" id='2012'>
+                            <p>2012</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2013')" id='2013'>
+                            <p>2013</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2014')" id='2014'>
+                            <p>2014</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2015')" id='2015'>
+                            <p>2015</p>
+                        </div>
+                        <div class="year-column-button" onclick="yearClick('2016')" id='2016'>
+                            <p>2016</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="year-column">
-                <h1 class="columnTitle">Year:</h1>
+            <div id="mapTypeDiv">
+                <h1 class="columnTitle">Maps:</h1>
                 <div class="columnList">
-                    <div class="year-column-button" onclick="yearClick('2010')" id='2010'>
-                        <p>2010</p>
+                    <div class="map-column-button" onclick="mapClick('race')" id='race' style="background-color: #ff7800">
+                        <p>Race</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2011')" id='2011'>
-                        <p>2011</p>
+                    <div class="map-column-button" onclick="mapClick('income')" id='income'>
+                        <p>Median Houeshold Income</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2012')" id='2012'>
-                        <p>2012</p>
+                    <div class="map-column-button" onclick="mapClick('home-value')" id='home-value'>
+                        <p>Median Home Value</p>
                     </div>
-                    <div class="year-column-button" onclick="yearClick('2013')" id='2013'>
-                        <p>2013</p>
-                    </div>
-                    <div class="year-column-button" onclick="yearClick('2014')" id='2014'>
-                        <p>2014</p>
-                    </div>
-                    <div class="year-column-button" onclick="yearClick('2015')" id='2015'>
-                        <p>2015</p>
-                    </div>
-                    <div class="year-column-button" onclick="yearClick('2016')" id='2016'>
-                        <p>2016</p>
+                </div>
+            </div>
+            <div id="sourceDiv">
+                <div class="columnList">
+                    <div class="source-column-button">
+                        <p><strong>Source:</strong> <a href="https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml" target="_blank"><em>United States Census Bureau</em></a></p>
                     </div>
                 </div>
             </div>
