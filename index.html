@@ -18,6 +18,7 @@
         var selectrace = "white";
         var selectyear = "2010"
         var mapId = "1R9oGEbQbFpX8M8sn5Dxj3Lh8pBA18woIdAteYotp";
+        var selectmap = "race";
 
         function raceClick(race) {
             //UPDATE RACE
@@ -31,13 +32,25 @@
                 elements[i].style.backgroundColor = 'white';
             }
             document.getElementById(race).style.backgroundColor = "#ff7800";
+            
+            //Set 'Race' on other maps column background color
+            var elements = document.getElementsByClassName('map-column-button');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundColor = 'white';
+            }
+            document.getElementById('race').style.backgroundColor = "#ff7800";
         }
 
         function yearClick(year) {
             //UPDATE YEAR
             selectyear = year;
             console.log("Year changed to: " + selectyear);
-            updateMapId(selectrace, selectyear);
+            console.log('Map changed to: ' + selectmap + ' ' + selectyear);
+            if(selectmap == 'race'){
+                updateMapId(selectrace, selectyear);
+            } else{
+                updateOtherMapId(selectmap, selectyear);
+            }
             initialize();
             console.log('MAP CHANGED');
             var elements = document.getElementsByClassName('year-column-button');
@@ -47,7 +60,22 @@
             document.getElementById(year).style.backgroundColor = "#ff7800";
         }
 
+        function mapClick(map) {
+            //UPDATE MAP
+            selectmap = map;
+            console.log("Map changed to: " + selectmap);
+            updateOtherMapId(selectmap, selectyear);
+            initialize();
+            console.log('MAP CHANGED');
+            var elements = document.getElementsByClassName('map-column-button');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.backgroundColor = 'white';
+            }
+            document.getElementById(map).style.backgroundColor = "#ff7800";
+        }
+
         function updateMapId(race, year) {
+            changeTitle(year, race);
             if (year == '2010') {
                 if (race == 'white') {
                     mapId = '1R9oGEbQbFpX8M8sn5Dxj3Lh8pBA18woIdAteYotp';
@@ -212,6 +240,85 @@
             console.log("MapId changed to: " + mapId);
         }
 
+        function updateOtherMapId(map, year) {
+            if (map == 'race') {
+                updateMapId(selectrace, selectyear);
+            }
+            else if (map == 'income') {
+                changeTitle(year, 'Median Household Income');
+                if (year == '2010') {
+                    mapId = '1xU4YHshSzx-Cg3qC9i4z9SEFqPkQSjNSzZuTNAjL';
+                }
+                else if (year == '2011') {
+                    mapId = '1YjxvV_aZnsRD7w3iFpAkDDWsxyezIUBEZ1xjhIJi';
+                }
+                else if (year == '2012') {
+                    mapId = '16IaW45ZxyikcNQaZ5gYXzzHUFE1nVeVl3_QlrC4V';
+                }
+                else if (year == '2013') {
+                    mapId = '1AQbR5Q-Z45BFDqVzFEmAkr4__XcOxE9IH07ujls_';
+                }
+                else if (year == '2014') {
+                    mapId = '1mV0kTw7vGEEYIAhNsv98DoPvMvcvy_pBxTZNJUUQ';
+                }
+                else if (year == '2015') {
+                    mapId = '12wGV2xMoO7oY4JMkyT0BoXoIqYEyicXJQiIpK1UZ';
+                }
+                else if (year == '2016') {
+                    mapId = '1oxJ0YczeOTm9uUzLRYB5YDhHpK0IPkHgIf5RA4wi';
+                }
+            }
+            else if (map == 'home-value') {
+                changeTitle(year, 'Median Home Value');
+                if (year == '2010') {
+                    mapId = '1rWBHTAmQO9UImh-wC7m5KMYsjZq40rdtcGF2BxC8';
+                }
+                else if (year == '2011') {
+                    mapId = '1DFv5-ZERF6l6vLhIOgN2OASwfUugp_tcVTpD8Ooh';
+                }
+                else if (year == '2012') {
+                    mapId = '1T6xNYYLwXUhsGwB85_8N7dtFVbymEb9NoFhk7XQX';
+                }
+                else if (year == '2013') {
+                    mapId = '1LagZ8gJs6BXY8SJl1T-bAh9R7-nHUGsiN1JYtuJe';
+                }
+                else if (year == '2014') {
+                    mapId = '1zYOxzzlQe10ThYst_sKJ_y8CzXDBpxZbbUcsknpQ';
+                }
+                else if (year == '2015') {
+                    mapId = '1K6Mn3U8Gi_lEeldW8IZuXJoNn9FLNm-C8L3aDw-1';
+                }
+                else if (year == '2016') {
+                    mapId = '1EAbuFNtO42t95S-3zsh4nq8GYAMAP-pWyHSvjisv';
+                }
+            }
+        }
+
+        function changeTitle(year, name) {
+            if (name == 'white') {
+                name = 'White alone';
+            }
+            else if (name == 'black') {
+                name = 'Black alone';
+            }
+            else if (name == 'native') {
+                name = 'American Indian and Alaska Native alone';
+            }
+            else if (name == 'asian'){
+                name = 'Asian alone';
+            } 
+            else if(name == 'islaner'){
+                name = 'Native Hawaiian and Other Pacific Islander alone';
+            }
+            else if(name == 'other'){
+                name = 'Some other race alone';
+            } else if(name == 'combo'){
+                name = 'Two or more races';
+            }
+            var title = document.getElementById('topTitle');
+            title.innerHTML = "Demographics Movement: " + year + " " + name;
+        }
+
         function initialize() {
             var isMobile = (navigator.userAgent.toLowerCase().indexOf('android') > -1) || (navigator.userAgent.match(/(iPod|iPhone|iPad|BlackBerry|Windows Phone|iemobile)/));
             if (isMobile) {
@@ -262,7 +369,7 @@
     </script>
     <div id="top">
         <div id="topTitleDiv">
-            <h1 id="topTitle">Demographics Movement</h1> </div>
+            <h1 id="topTitle">Demographics Movement: 2010 White alone</h1> </div>
     </div>
     <div id="sideBar">
         <div id="sideBarContent">
