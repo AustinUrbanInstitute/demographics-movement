@@ -18,6 +18,7 @@
         var selectrace = "white";
         var selectyear = "2010"
         var mapId = "1R9oGEbQbFpX8M8sn5Dxj3Lh8pBA18woIdAteYotp";
+        var key = "AIzaSyDi2_IGxty7Ek0d1rD5G-AWIJJV5tNGPEw";
         var selectmap = "race";
 
         function raceClick(race) {
@@ -32,7 +33,6 @@
                 elements[i].style.backgroundColor = 'white';
             }
             document.getElementById(race).style.backgroundColor = "#ff7800";
-            
             //Set 'Race' on other maps column background color
             var elements = document.getElementsByClassName('map-column-button');
             for (var i = 0; i < elements.length; i++) {
@@ -46,9 +46,10 @@
             selectyear = year;
             console.log("Year changed to: " + selectyear);
             console.log('Map changed to: ' + selectmap + ' ' + selectyear);
-            if(selectmap == 'race'){
+            if (selectmap == 'race') {
                 updateMapId(selectrace, selectyear);
-            } else{
+            }
+            else {
                 updateOtherMapId(selectmap, selectyear);
             }
             initialize();
@@ -299,20 +300,21 @@
                 name = 'White alone';
             }
             else if (name == 'black') {
-                name = 'Black alone';
+                name = 'Black or African American alone';
             }
             else if (name == 'native') {
                 name = 'American Indian and Alaska Native alone';
             }
-            else if (name == 'asian'){
+            else if (name == 'asian') {
                 name = 'Asian alone';
-            } 
-            else if(name == 'islaner'){
+            }
+            else if (name == 'islaner') {
                 name = 'Native Hawaiian and Other Pacific Islander alone';
             }
-            else if(name == 'other'){
+            else if (name == 'other') {
                 name = 'Some other race alone';
-            } else if(name == 'combo'){
+            }
+            else if (name == 'combo') {
                 name = 'Two or more races';
             }
             var title = document.getElementById('topTitle');
@@ -327,9 +329,11 @@
             }
             var mapDiv = document.getElementById('googft-mapCanvas');
             var map = new google.maps.Map(mapDiv, {
-                center: new google.maps.LatLng(30.302042273550025, -97.64095630979722)
-                , zoom: 9
+                googleApiKey: key
+                , center: new google.maps.LatLng(30.319042273550095, -97.8005630979722)
+                , zoom: 10.7
                 , mapTypeId: google.maps.MapTypeId.ROADMAP
+                
             });
             map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend-open'));
             map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(document.getElementById('googft-legend'));
@@ -381,7 +385,7 @@
                             <p>White alone</p>
                         </div>
                         <div class="race-column-button" onclick="raceClick('black')" id='black'>
-                            <p>Black alone</p>
+                            <p>Black or African American alone</p>
                         </div>
                         <div class="race-column-button" onclick="raceClick('native')" id='native'>
                             <p>American Indian and Alaska Native alone</p>
@@ -451,9 +455,12 @@
         </div>
     </div>
     <div id="main">
-        <!--<div id="legend">
-            <h1 id="legendTitle">Gentrification Percentages:</h1>
+        <div id="legend">
+            <h1 id="legendTitle">Map Guide:</h1>
             <div id="legendTable">
+                <div class="legendRow">
+                    <div class="legendSubject">Mapped by census tract. Click on tract for more info.</div>
+                </div>
                 <div class="legendRow">
                     <div class="legendSquare" style="background-color: #93201d"></div>
                     <div class="legendSubject">>70%</div>
@@ -462,20 +469,8 @@
                     <div class="legendSquare" style="background-color: #c9965c"></div>
                     <div class="legendSubject">50-70%</div>
                 </div>
-                <div class="legendRow">
-                    <div class="legendSquare" style="background-color: #d2bb6d"></div>
-                    <div class="legendSubject">40-50%</div>
-                </div>
-                <div class="legendRow">
-                    <div class="legendSquare" style="background-color: #679c4a"></div>
-                    <div class="legendSubject">
-                        <40%</div>
-                    </div>
-                    <div class="legendRow">
-                        <div class="legendSquare" style="background-color: #73a5cb"></div>
-                        <div class="legendSubject">no data</div>
-                    </div>
-                </div> <a id="legendSource" target="_blank" href="https://fusiontables.google.com/DataSource?docid=101jSo8YC3qo5qZ-AbAoDWb6NSVp0Zr1tGgNhuxI0#rows:id=1">Source</a> </div>-->
+        
+                </div> <a id="legendSource" target="_blank" href="https://fusiontables.google.com/DataSource?docid=101jSo8YC3qo5qZ-AbAoDWb6NSVp0Zr1tGgNhuxI0#rows:id=1">Source</a> </div>
         <!--MAP-->
         <div id="googft-mapCanvas"></div>
     </div>
